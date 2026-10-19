@@ -1,0 +1,99 @@
+:root {
+--priCol: #0f172a;
+--accent: #2563eb;
+--bgLight: #f8fafc;
+--txtDark: #334155;
+--fontFam: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* 1. Element Selector */
+body {
+font-family: var(--fontFam);
+background-color: var(--bgLight);
+color: var(--txtDark);
+margin: 0;
+padding: 0;
+line-height: 1.5;
+}
+
+/* 2. ID Selector */
+#mainCont {
+max-width: 900px;
+margin: 20px auto;
+padding: 20px;
+background: #fff;
+border-radius: 6px;
+}
+
+/* 3. Class Selector */
+.navBar {
+background: var(--priCol);
+padding: 10px 0;
+}
+
+/* 4. Descendant Selector */
+.navBar ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+margin: 0;
+padding: 0;
+}
+
+/* 5. Pseudo-class Selector */
+.navBar a:hover {
+color: #93c5fd;
+text-decoration: underline;
+}
+
+.navBar a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* 6. Attribute Selector */
+input[required], textarea[required] {
+border-left: 4px solid var(--accent);
+}
+
+.pBox {
+display: flex;
+gap: 20px;
+align-items: flex-start;
+margin-top: 20px;
+}
+
+.profImg {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 4px;
+}
+
+footer {
+text-align: center;
+padding: 15px;
+font-size: 0.9rem;
+color: #64748b;
+}
+
+/* Mobile Responsive Layout matching Storyboard Specs */
+@media (max-width: 600px) {
+.pBox {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.profImg {
+width: 100%;
+max-width: 180px;
+height: auto;
+}
+.navBar ul {
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+}
